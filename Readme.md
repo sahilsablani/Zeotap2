@@ -13,28 +13,8 @@ Scrapes documentation from supported CDPs (Segment, mParticle, Lytics, Zeotap).
 Efficient search functionality to retrieve answers from indexed documentation.
 API for querying documentation with user questions.
 Modular and extensible design for adding more CDPs.
-File Structure
-bash
-Copy code
-cdp_chatbot/
-├── app.py                           # Main Flask app entry point
-├── requirements.txt                 # Python dependencies
-├── README.md                        # Project documentation
-├── configs/
-│   ├── scraper_config.json          # Configuration for scraper URLs
-│   ├── logging_config.json          # Logging settings
-├── scraper/
-│   ├── __init__.py                  # Marks this as a Python package
-│   ├── segment_scraper.py           # Logic to scrape Segment docs
-│   ├── mparticle_scraper.py         # Logic to scrape mParticle docs
-│   ├── lytics_scraper.py            # Logic to scrape Lytics docs
-│   ├── zeotap_scraper.py            # Logic to scrape Zeotap docs
-├── indexer/
-│   ├── __init__.py                  # Marks this as a Python package
-│   ├── content_indexer.py           # Indexes and searches scraped content
-└── tests/
-    ├── test_app.py                  # Unit tests for Flask endpoints
-    ├── test_scraper.py              # Unit tests for scraper logic
+
+
 Setup Instructions
 Prerequisites
 Python 3.9 or above installed.
@@ -42,25 +22,19 @@ Postman for API testing.
 Steps
 Clone the repository:
 
-bash
-Copy code
 git clone https://github.com/your-username/cdp-chatbot.git
+
 cd cdp-chatbot
 Create a virtual environment and activate it:
 
-bash
-Copy code
 python3 -m venv venv  
 source venv/bin/activate  # On Windows: venv\Scripts\activate  
+
 Install dependencies:
 
-bash
-Copy code
 pip install -r requirements.txt  
 Run the Flask app:
 
-bash
-Copy code
 python app.py  
 Access the app at http://127.0.0.1:5000.
 
